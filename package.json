@@ -1,8 +1,13 @@
 {
   "name": "cra-template-staffpy",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.2",
+  "author": "Evrim Tastan <evrimstone@gmail.com>",
+  "license": "MIT",
+  "main": "template.json",
+  "private": false,
   "dependencies": {
+    "@emotion/core": "^10.1.1",
+    "@emotion/styled": "^10.0.27",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -16,11 +21,39 @@
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
+  "description": "Staffpy CRA",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "enzyme",
+    "eslint",
+    "redux",
+    "react-redux",
+    "react-router",
+    "react-router-dom",
+    "typescript",
+    "prettier"
+  ],
+  "files": [
+    "template",
+    "template.json"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "_postinstall": "husky install",
+    "prepublish": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "commit": "yarn run git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +72,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
+    "commitizen": "^4.2.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "husky": "^5.0.0-beta.0",
+    "jest-emotion": "^10.0.32",
+    "pinst": "^2.0.0",
+    "standard-version": "^9.0.0"
   }
 }
