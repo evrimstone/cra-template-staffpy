@@ -4,6 +4,6 @@ interface Props {
   text: string;
 }
 
-export const ExampleComponent = ({ text }: Props) => {
+export const ExampleComponent: React.FC<Props> = ({ text }: Props) => {
   return <div>Example Components: {text}</div>;
 };
