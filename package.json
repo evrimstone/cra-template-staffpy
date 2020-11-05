@@ -41,6 +41,7 @@
     "template.json"
   ],
   "scripts": {
+
     "_postinstall": "husky install",
     "prepublish": "pinst --disable",
     "postpublish": "pinst --enable",
