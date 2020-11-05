@@ -14,16 +14,8 @@
       "@types/react": "^16.9.53",
       "@types/react-dom": "^16.9.8",
       "@types/jest": "^26.0.15",
-      "@commitlint/cli": "^11.0.0",
-      "@commitlint/config-conventional": "^11.0.0",
-      "@commitlint/prompt": "^11.0.0",
-      "@semantic-release/changelog": "^5.0.1",
-      "@semantic-release/git": "^9.0.0",
       "@typescript-eslint/eslint-plugin": "^4.6.1",
       "@typescript-eslint/parser": "^4.6.1",
-      "commitizen": "^4.2.2",
-      "enzyme": "^3.11.0",
-      "enzyme-adapter-react-16": "^1.15.5",
       "eslint": "^7.12.1",
       "eslint-config-prettier": "^6.15.0",
       "eslint-config-react-app": "^6.0.0",
@@ -35,13 +27,20 @@
       "eslint-plugin-prettier": "^3.1.4",
       "eslint-plugin-react": "^7.21.5",
       "eslint-plugin-react-hooks": "^4.2.0",
-      "husky": "^5.0.0-beta.0",
       "jest-emotion": "^10.0.32",
-      "pinst": "^2.0.0",
       "prettier": "2.1.2",
       "prettier-eslint": "^11.0.0",
-      "prettier-eslint-cli": "^5.0.0",
-      "semantic-release": "^17.2.2"
+      "prettier-eslint-cli": "^5.0.0"
+    },
+    "peerDependencies": {
+      "react": "^16.0.0",
+      "react-dom": "^16.0.0",
+      "styled-components": "^5.0.0",
+      "@emotion/core": "^10.1.1",
+      "@emotion/styled": "^10.0.27"
+    },
+    "publishConfig": {
+      "registry": "https://npm.pkg.github.com/"
     },
     "scripts": {
       "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
